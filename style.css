@@ -48,7 +48,7 @@ body {
     
     .track-name {
       margin-top: 5px;
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       white-space: pre-line; /* Adiciona quebras de linha */
   }
   
@@ -62,7 +62,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
     }
     .active{
         color: black;
@@ -167,8 +167,8 @@ body {
       align-items: center;
     }
     .loader .stroke{
-        background: #f1f1f1;
-        height: 150%;
+        background: #b95632;
+        height: 90%;
         width: 10px;
         border-radius: 50px;
         margin: 0 5px;
@@ -177,11 +177,11 @@ body {
       @keyframes animate {
         50% {
           height: 20%;
-          background: #4286f4;
+          background: #8a1d0f;
         }
     
         100% {
-          background: #4286f4;
+          background: #8a1d0f;
           height: 100%;
         }
       }

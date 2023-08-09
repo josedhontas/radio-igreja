@@ -16,7 +16,7 @@ function playpauseTrack() {
 function playTrack() {
     curr_track.play();
     isPlaying = true;
-    //wave.classList.add('loader');
+    wave.classList.add('loader');
     document.querySelector('.playpause-track i').classList.remove('fa-play-circle');
     document.querySelector('.playpause-track i').classList.add('fa-pause-circle');
 }
@@ -24,6 +24,7 @@ function playTrack() {
 function pauseTrack() {
     curr_track.pause();
     isPlaying = false;
+    wave.classList.remove('loader');
     document.querySelector('.playpause-track i').classList.remove('fa-pause-circle');
     document.querySelector('.playpause-track i').classList.add('fa-play-circle');
 }
