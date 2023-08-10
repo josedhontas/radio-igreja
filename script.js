@@ -1,32 +1,30 @@
-let curr_track = document.createElement('audio');
-let isPlaying = false;
+let audio = document.createElement('audio');
+let tocando = false;
 
 // Configurar a fonte de áudio
-curr_track.src = "http://12.stmip.net:8566/stream";
-curr_track.load();
+audio.src = "http://12.stmip.net:8566/stream";
+audio.load();
 
-function playpauseTrack() {
-    if (isPlaying) {
-        pauseTrack();
+function tocarpausarRadio() {
+    if (tocando) {
+        pausarRadio();
     } else {
-        playTrack();
+        tocarRadio();
     }
 }
 
-function playTrack() {
-    curr_track.play();
-    isPlaying = true;
+function tocarRadio() {
+    audio.play();
+    tocando = true;
     wave.classList.add('loader');
     document.querySelector('.playpause-track i').classList.remove('fa-play-circle');
     document.querySelector('.playpause-track i').classList.add('fa-pause-circle');
 }
 
-function pauseTrack() {
-    curr_track.pause();
-    isPlaying = false;
+function pausarRadio() {
+    audio.pause();
+    tocando = false;
     wave.classList.remove('loader');
     document.querySelector('.playpause-track i').classList.remove('fa-pause-circle');
     document.querySelector('.playpause-track i').classList.add('fa-play-circle');
 }
-
-// Outras funções e manipulação de elementos podem ser removidas
